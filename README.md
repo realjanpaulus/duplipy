@@ -1,0 +1,2 @@
+# duplipy
+Text duplicate detection.
