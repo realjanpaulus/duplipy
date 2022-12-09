@@ -1,6 +1,5 @@
-from duplipy import DuplicateDetector
+from duplipy import DuplicateDetector, Loader
 
-dd = DuplicateDetector()
 # list
 data1 = [
     "the cat sat in the hat",
@@ -19,8 +18,13 @@ data3 = {
     "id": [0, 1, 2],
     "text": ["the cat sat in the hat", "the cat sat on the mat", "we all scream for ice scream"],
 }
+from simhash import Simhash
 
+loader = Loader(algorithm=Simhash)
+print(loader.load(data1))
 
+exit()
+dd = DuplicateDetector()
 dd.fit(data3)
 
 for k, v in dd.data.items():
